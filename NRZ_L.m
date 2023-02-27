@@ -1,11 +1,14 @@
 clc;
 clear all;
 close all;
-
+%Encode :
+% 0 -> 1
+% 1 -> -1
 data = [1 0 0 1 1 0 1 0];
 point = 100;
-encoded_signal = zeros(1,length(data)*point);
 
+%Encoded_Signal
+encoded_signal = zeros(1,length(data)*point);
 for i=1:length(data)
     if data(i)==1
         encoded_signal((i-1)*point+1:i*point) = -1;
@@ -21,6 +24,7 @@ plot(size,encoded_signal);
 title('Encoded Signal');
 ylim([-3,3]);
 
+%Decoded_Signal
 decoded_signal = zeros(1,length(encoded_signal));
 for i=1:length(encoded_signal)
     if encoded_signal(i)==-1
