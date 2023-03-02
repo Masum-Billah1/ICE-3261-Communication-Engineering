@@ -4,10 +4,12 @@ close all;
 data = [1 0 0 1 1 0 1 0];
 point = 100;
 status = 1;
+
 %Encoded_Signal
 %previous one : positive
 % 0 -> same
 % 1 -> alternate
+
 encoded_signal = zeros(1,length(data)*point);
 for i=1:length(data)
     if data(i) == 1
@@ -24,6 +26,10 @@ title('Encoded Signal');
 ylim([-3,3]);
 
 %Decoded_Signal
+%previous one : positive
+%same as before -> 0
+%alternate -> 1
+
 status = 1;
 decoded_signal = zeros(1,length(encoded_signal));
 for i=1:length(data)
