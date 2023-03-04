@@ -3,7 +3,6 @@ clear all;
 close all;
 data = [0 1 0 1 1 0 1 1];
 point = 100;
-status = 1;
 flag = [1 0 -1 0];
 
 %Encoded_Signal
