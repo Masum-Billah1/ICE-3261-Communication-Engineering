@@ -1,0 +1,24 @@
+clc;
+clear all;
+close all;
+data = [1 0 1 1 0];
+ln = length(data);
+
+point = 100;
+encoded_signal = zeros(1,point*ln);
+for i = 1:ln
+    if data(i) == 1
+        encoded_signal((i-1)*point+1:i*point) = 1;
+    end
+end
+        
+size = 0:1/point:ln-1/point;
+
+plot(size,encoded_signal);
+title('Encoded Signal for Unipolar NRZ');
+ylim([-3,3]);
+
+for i=1:ln
+    decoded_signal(i) = encoded_signal(i*point);
+end
+decoded_signal
