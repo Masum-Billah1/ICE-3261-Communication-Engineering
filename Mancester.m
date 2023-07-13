@@ -5,8 +5,8 @@ data = [0 1 0 0 1 1];
 point = 100;
 
 %Encoded_Signal
-% 0 -> -1 to +1
-% 1 -> +1 to -1
+% 0 -> +1 to -1
+% 1 -> -1 to +1
 encoded_signal = zeros(1,length(data)*point);
 for i=1:length(data)
     if data(i)==0
