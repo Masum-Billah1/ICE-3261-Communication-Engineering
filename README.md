@@ -23,8 +23,8 @@
 1 -> 1 to 0<br>
 
 <b>Manchester:</b><br>
-0 -> -1 to +1<br>
-1 -> 1 to -1<br>
+0 -> +1 to -1<br>
+1 -> -1 to +1<br>
 <br>
 <b>Diff Manchester:</b><br>
 0 -> starting & ending state same<br>
